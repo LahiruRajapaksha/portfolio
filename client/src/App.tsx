@@ -1,14 +1,15 @@
+import { useState } from "react";
 import MainLayout from "./components/Layouts/MainLayout";
 import PageNavBar from "./components/NavBar/NavBar";
 
 function App() {
+  const [selectedPage, setSelectedPage] = useState("Home");
   return (
     <MainLayout>
-      <PageNavBar />
-      <div>
-        <h1>Hello world!</h1>
-        <h1>Hello world!</h1>
-      </div>
+      <PageNavBar
+        selectedPage={selectedPage}
+        setSelectedPage={setSelectedPage}
+      />
     </MainLayout>
   );
 }

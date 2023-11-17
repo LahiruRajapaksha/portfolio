@@ -5,12 +5,7 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    screens: {
-      sm: '480px',
-      md: '768px',
-      lg: '976px',
-      xl: '1440px',
-    },
+
     colors: {
       'blue': '#1fb6ff',
       'purple': '#7e5bef',
@@ -21,6 +16,18 @@ export default {
       'gray-dark': '#273444',
       'gray': '#8492a6',
       'gray-light': '#d3dce6',
+    },
+    extend: {
+      fontFamily: {
+        playfair: ['Playfair Display', 'serif'],
+        opensans: ['Open Sans', 'sans-serif'],
+      }
+    },
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
     },
   },
   plugins: [],
