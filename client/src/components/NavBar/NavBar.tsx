@@ -32,7 +32,7 @@ type PageNavBarProps = {
 const PageNavBar = (props: PageNavBarProps) => {
   const { selectedPage, setSelectedPage } = props;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const isLargeScreen = useMediaQuery("(min-width: 480px)");
+  const isLargeScreen = useMediaQuery("(min-width: 768px)");
   return (
     <nav className="z-40 w-full fixed top-0 py-6">
       <div className="flex items-center justify-between mx-auto w-5/6">

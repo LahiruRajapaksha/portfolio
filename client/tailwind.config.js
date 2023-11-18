@@ -21,14 +21,18 @@ export default {
       fontFamily: {
         playfair: ['Playfair Display', 'serif'],
         opensans: ['Open Sans', 'sans-serif'],
-      }
+      },
+      backgroundImage: {
+        'homeBg': 'url("/src/assets/autumBg.png")',
+      },
     },
     screens: {
-      sm: '480px',
       md: '768px',
-      lg: '976px',
-      xl: '1440px',
+      lg: '992px',
+      xl: '1200px',
+      xxl: '1400px'
     },
+
   },
   plugins: [],
 }

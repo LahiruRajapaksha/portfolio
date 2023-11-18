@@ -3,11 +3,12 @@ import MainLayout from "./components/Layouts/MainLayout";
 import PageNavBar from "./components/NavBar/NavBar";
 import useMediaQuery from "./hooks/useMediaQuery";
 import DotGroup from "./components/DotGroup/DotGroup";
+import Landing from "./components/Landing/Landing";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("Home");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
-  const isAboveMediumScreens = useMediaQuery("(min-width: 976px)");
+  const isAboveMediumScreens = useMediaQuery("(min-width: 768px)");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,7 +28,7 @@ function App() {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
-      <div className="w-5/6 mx-auto md:h-full">
+      <div className="w-full mx-auto h-full">
         {isAboveMediumScreens && (
           <DotGroup
             selectedPage={selectedPage}
@@ -35,6 +36,7 @@ function App() {
           />
         )}
         <Landing selectedPage={selectedPage} />
+        {/* <Landing selectedPage={selectedPage} /> */}
       </div>
     </MainLayout>
   );
