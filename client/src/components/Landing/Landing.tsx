@@ -19,17 +19,41 @@ const Landing = (props: LandingProps) => {
     >
       <div className="md:order-2 flex justify-center basis-3/5 z-10 mt-32">
         {isAboveMediumScreens ? (
-          <img
-            alt="home-image"
-            src={homeMe}
-            className="w-full max-w-[300px] md:max-w-[300px] lg:max-w-[400px] xxl:max-w-[500px]"
-          />
+          <motion.div
+            initial={{ y: 30, opacity: 1, scale: 1, rotate: 3 }}
+            animate={{ y: -30, opacity: 1, scale: 1, rotate: -3 }}
+            transition={{
+              duration: 3,
+              delay: 0.5,
+              ease: "easeInOut",
+              repeat: Infinity,
+              repeatType: "reverse",
+            }}
+          >
+            <img
+              alt="home-image"
+              src={homeMe}
+              className="w-full max-w-[300px] md:max-w-[300px] lg:max-w-[400px] xxl:max-w-[400px]"
+            />
+          </motion.div>
         ) : (
-          <img
-            alt="home-image"
-            src={homeMe}
-            className="w-full max-w-[300px] md:max-w-[300px] lg:max-w-[400px] 2xl:max-w-[500px]"
-          />
+          <motion.div
+            initial={{ y: 20, opacity: 1, scale: 1, rotate: 3 }}
+            animate={{ y: -20, opacity: 1, scale: 1, rotate: -3 }}
+            transition={{
+              duration: 4,
+              delay: 0.5,
+              ease: "easeInOut",
+              repeat: Infinity,
+              repeatType: "reverse",
+            }}
+          >
+            <img
+              alt="home-image"
+              src={homeMe}
+              className="w-full max-w-[300px] md:max-w-[300px] lg:max-w-[400px] 2xl:max-w-[500px]"
+            />
+          </motion.div>
         )}
       </div>
       <div className="z-30 basis-2/5 mt-12 md:mt-32">
